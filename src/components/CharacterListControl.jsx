@@ -16,13 +16,9 @@ class CharacterList extends React.Component{
       fastFallerCharacters: false,
       heavyFallerCharacters: false,
     };
-    this.handleCharListAll = this.handleCharListAll.bind(this);
-    this.handleCharListFloaty = this.handleCharListFloaty.bind(this);
-    this.handleCharListFastFaller = this.handleCharListFastFaller.bind(this);
-    this.handleCharListHeavyFaller = this.handleCharListHeavyFaller.bind(this);
   }
 
-  handleCharListFloaty() {
+  handleCharListFloaty()  {
     this.setState({ allCharacters: false });
     this.setState({ floatyCharacters: true });
     this.setState({ fastFallerCharacters: false });
@@ -77,10 +73,10 @@ class CharacterList extends React.Component{
         </div>
         <div className="charLists">
         <div>
-          <button className="changeButton" onClick={this.handleCharListFloaty}>Floaties</button>
-          <button className="changeButton" onClick={this.handleCharListFastFaller}>Fast-Faller</button>
-          <button className="changeButton" onClick={this.handleCharListHeavyFaller}>Heavy-Faller</button>
-          <button className="changeButton" onClick={this.handleCharListAll}>All</button>
+          <button className="changeButton" onClick={this.handleCharListFloaty.bind(this)}>Floaties</button>
+          <button className="changeButton" onClick={this.handleCharListFastFaller.bind(this)}>Fast-Faller</button>
+          <button className="changeButton" onClick={this.handleCharListHeavyFaller.bind(this)}>Heavy-Faller</button>
+          <button className="changeButton" onClick={this.handleCharListAll.bind(this)}>All</button>
         </div>
           {charFilter}
         </div>
